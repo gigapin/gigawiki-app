@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ed90ec9d.css",
+    "main.js": "/static/js/main.fe774dca.js",
+    "static/js/787.04fdf46e.chunk.js": "/static/js/787.04fdf46e.chunk.js",
+    "static/media/docs.jpg": "/static/media/docs.3a4def9ac7d4461df155.jpg",
+    "static/media/GiGaWikiOnlyLogo.png": "/static/media/GiGaWikiOnlyLogo.48221916055948295c1f.png",
+    "static/media/GiGaWiki-logo-web.png": "/static/media/GiGaWiki-logo-web.4678f015f4af8a359973.png",
+    "index.html": "/index.html",
+    "main.ed90ec9d.css.map": "/static/css/main.ed90ec9d.css.map",
+    "main.fe774dca.js.map": "/static/js/main.fe774dca.js.map",
+    "787.04fdf46e.chunk.js.map": "/static/js/787.04fdf46e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ed90ec9d.css",
+    "static/js/main.fe774dca.js"
+  ]
+}
