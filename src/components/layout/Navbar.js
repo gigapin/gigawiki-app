@@ -5,16 +5,17 @@ import { useState } from 'react'
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const demo = "http://demo.gigawiki.test";
   
   return (
     <nav className="px-4 py-5 container mx-auto border-b border-emerald-100 dark:border-emerald-700 text-gray-700  dark:text-gray-100">
       <div className="relative grid items-center grid-cols-2 lg:grid-cols-3">
-        <ul className="flex hidden items-center list-none space-x-8 lg:flex">
+        <ul className="flex hidden items-center list-none space-x-8 lg:flex text-xl">
           <li>
             <Link
               to="/"
-              aria-label="Our product"
-              title="Our product"
+              aria-label="Home"
+              title="Home"
               className="font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               Home
@@ -23,28 +24,28 @@ export const Navbar = () => {
           <li>
             <Link
               to="/libraries"
-              aria-label="Our product"
-              title="Our product"
+              aria-label="Docs"
+              title="Docs"
               className="font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
-              Libraries
+              Docs
             </Link>
           </li>
-          {/* <li>
+          <li>
             <Link
-              to="/"
-              aria-label="Product pricing"
-              title="Product pricing"
+              to="/contacts"
+              aria-label="Contact"
+              title="Contact"
               className="font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               Contact
             </Link>
-          </li> */}
+          </li>
         </ul>
         <Link
           to="/"
-          aria-label="Company"
-          title="Company"
+          aria-label="GiGaWiki"
+          title="GiGaWiki"
           className="inline-flex items-center lg:mx-auto"
         >
           <img
@@ -55,14 +56,16 @@ export const Navbar = () => {
         </Link>
         <ul className="items-center hidden ml-auto space-x-8 list-none lg:flex">
           <li>
-            {/* <Link
-              to="/"
-              aria-label="Sign in"
-              title="Sign in"
-              className="font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400"
+            <a
+              href={demo}
+              target="_blank"
+              rel='noreferrer'
+              aria-label="Get Demo"
+              title="Get Demo"
+              className="font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400 hover:no-underline text-xl bg-green-400 p-4 text-white"
             >
-              Sign in
-            </Link> */}
+              Get a demo
+            </a>
           </li>
         </ul>
         <div className="ml-auto lg:hidden">
@@ -94,8 +97,8 @@ export const Navbar = () => {
                   <div>
                     <Link
                       to="/"
-                      aria-label="Company"
-                      title="Company"
+                      aria-label="Home"
+                      title="Home"
                       className="inline-flex items-center"
                     >
                       <img
@@ -126,8 +129,8 @@ export const Navbar = () => {
                     <li>
                       <Link
                         to="/"
-                        aria-label="Our product"
-                        title="Our product"
+                        aria-label="Home"
+                        title="Home"
                         className="font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
                         Home
@@ -136,32 +139,34 @@ export const Navbar = () => {
                     <li>
                       <Link
                         to="/libraries"
-                        aria-label="Our product"
-                        title="Our product"
+                        aria-label="Docs"
+                        title="Docs"
                         className="font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
-                        Libraries
+                        Docs
                       </Link>
                     </li>
-                    {/* <li>
+                    <li>
                       <Link
-                        to="/"
-                        aria-label="Product pricing"
-                        title="Product pricing"
+                        to="/contacts"
+                        aria-label="Contact"
+                        title="Contact"
                         className="font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
                         Contact
                       </Link>
-                    </li> */}
+                    </li>
                     <li>
-                      {/* <Link
-                        to="/"
-                        aria-label="Sign in"
-                        title="Sign in"
-                        className="font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400"
-                      >
-                        Sign in
-                      </Link> */}
+                    <a
+                      href={demo}
+                      target="_blank"
+                      rel='noreferrer'
+                      aria-label="Get Demo"
+                      title="Get Demo"
+                      className="font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400 hover:no-underline text-xl bg-green-400 p-2 text-white"
+                    >
+                      Get a demo
+                    </a>
                     </li>
                   </ul>
                 </nav>
