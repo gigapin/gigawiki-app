@@ -7,7 +7,7 @@ const SidebarDocument = ({ document, menus, section }) => {
       menus.filter(menu => section.id === menu.section_id).map(
         (menu) => (
             <div className="pl-3" key={menu.id}>
-              <Link to={`/documents/${document.slug}/${menu.slug}`} className="text-gray-600 dark:text-lime-100 text-sm">
+              <Link to={`/documents/${document.slug}/${menu.slug}`} className="text-lime-700 dark:text-lime-100 text-sm">
                 {menu.title}
               </Link>
             </div>

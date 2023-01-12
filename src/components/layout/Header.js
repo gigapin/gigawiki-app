@@ -16,7 +16,7 @@ const Header = () => {
           </div>
         </div>
         <div>
-          <img className="object-cover w-full h-56 rounded shadow-xl sm:h-96" src={doc} alt="Representing a stack of documents" />
+          <img className="object-cover w-full h-56 rounded-2xl shadow-xl sm:h-96" src={doc} alt="Representing a stack of documents" />
         </div>
       </div>
     </div>

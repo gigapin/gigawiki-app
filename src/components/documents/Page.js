@@ -41,8 +41,8 @@ const Page = () => {
   
   return(
     <>
-      <div className="md:grid md:grid-cols-4 lg:grid-cols-5">
-        <div id="drawer-navigation" ref={mobileSidebar} className="hidden md:block h-full pt-4 overflow-y-auto border-r-2 border-emerald-100 dark:border-emerald-700" aria-labelledby="drawer-navigation-label">
+      <div className="md:grid md:grid-cols-4 lg:grid-cols-5 lg:container lg:mx-auto">
+        <div id="drawer-navigation" ref={mobileSidebar} className="hidden md:block h-full pt-8 pl-6 overflow-y-auto border-r-2 border-emerald-100 dark:border-emerald-700" aria-labelledby="drawer-navigation-label">
           <Section document={document} menus={menus} sections={sections} /> 
         </div>
 
@@ -50,11 +50,11 @@ const Page = () => {
           <div className="w-fit mx-auto">
             <button className="md:hidden p-2 border border-emerald-200 text-sm mx-auto" onClick={toggleMobileSidebar}>Show Pages</button>
           </div>
-          <h1 className="mb-6 pt-4 font-sans text-3xl font-bold tracking-tight text-gray-900 dark:text-teal-400 sm:text-4xl sm:leading-none" key={document.id}> 
+          <h1 className="mb-6 pt-4 font-sans text-3xl font-bold tracking-tight text-teal-700 dark:text-teal-400 sm:text-4xl sm:leading-none" key={document.id}> 
             {page.title}
           </h1> 
 
-          <div dangerouslySetInnerHTML={{__html:page.content}}></div>  
+          <div className="text-lime-900" dangerouslySetInnerHTML={{__html:page.content}}></div>  
 
           <PaginatePage document={document} prev={prev} next={next} />
 
