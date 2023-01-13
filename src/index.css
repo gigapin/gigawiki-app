@@ -4,11 +4,11 @@
 
 :root {
   --background: #ffffff;
-  --text-primary: #111111;
-  --text-secondary: #444444;
+  --text-primary: #365314;
+  --text-secondary: #4d7c0f;
   --text-link: #0ea5e9;
   --blockquote: #fdba74;
-  --border: #333333;
+  --border: #064e3b;
 }
 
 [data-theme='dark'] {
