@@ -32,8 +32,8 @@ const Document = () => {
   }, [project]);
   
   return(
-    <div className="md:grid md:grid-cols-4 lg:grid-cols-5 lg:mx-auto lg:container">
-      <div id="drawer-navigation" ref={mobileSidebar} className="hidden md:block h-full lg:pl-6 overflow-y-auto border-r-2 border-emerald-100 dark:border-emerald-700 pt-4" aria-labelledby="drawer-navigation-label">
+    <div className=" md:grid md:grid-cols-4 lg:grid-cols-5 lg:mx-auto lg:container">
+      <div id="drawer-navigation" ref={mobileSidebar} className="hidden md:block h-screen lg:pl-6 overflow-y-auto border-r-2 border-emerald-100 dark:border-emerald-700 pt-4" aria-labelledby="drawer-navigation-label">
         <Section document={document} menus={menus} sections={sections} key={document.toString()} /> 
       </div>
       
@@ -44,7 +44,9 @@ const Document = () => {
         <h2 className="mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 dark:text-teal-400 sm:text-4xl sm:leading-none"> 
           {document.name}
         </h2> 
+        <div className="dark:text-lime-400">
         {document.description}  
+        </div>
       </div>
     </div>
   )

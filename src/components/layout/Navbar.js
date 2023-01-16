@@ -1,14 +1,45 @@
 import logo from '../../assets/GiGaWiki-logo-web.png';
 import onlyLogo from '../../assets/GiGaWikiOnlyLogo.png';
 import { Link } from 'react-router-dom';
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import IconTheme from './IconTheme';
+
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const demo = "http://demo.gigawiki.test";
+
+  const ref = useRef(null)
+
+  const [theme, setTheme] = useState('light')
+  const [iconClassName, setIconClassName] = useState('block')
+
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark')
+      document.documentElement.classList.remove('light')
+      localStorage.theme = 'dark'
+      
+    } else {
+      document.documentElement.classList.remove('dark')
+      document.documentElement.classList.add('light')
+      localStorage.theme = 'light'
+    }
+  })
+
+  const handleIconTheme = () => {
+    if (iconClassName === 'hidden') {
+      setTheme('light')
+      setIconClassName('block')
+    } else {
+      setTheme('dark')
+      setIconClassName('hidden')
+    }
+    console.log(iconClassName)
+  }
   
   return (
-    <nav className="px-4 py-5 container mx-auto border-b border-emerald-100 dark:border-emerald-700 text-gray-700  dark:text-gray-100">
+    <nav className="px-4 py-5 mx-auto border-b border-emerald-100  text-gray-700 xl:px-24 2xl:px-32  dark:text-gray-100 dark:border-emerald-700 dark:bg-black">
       <div className="relative grid items-center grid-cols-2 lg:grid-cols-3">
         <ul className="flex hidden items-center list-none space-x-8 lg:flex text-xl">
           <li>
@@ -56,6 +87,11 @@ export const Navbar = () => {
         </Link>
         <ul className="items-center hidden ml-auto space-x-8 list-none lg:flex">
           <li>
+            <button onClick={handleIconTheme}>
+              <IconTheme iconClassName={iconClassName} ref={ref} />
+            </button>
+          </li>
+          <li>
             <a
               href={demo}
               target="_blank"
@@ -92,7 +128,7 @@ export const Navbar = () => {
           </button>
           {isMenuOpen && (
             <div className="absolute top-0 left-0 w-full">
-              <div className="p-5 bg-white border rounded shadow-sm">
+              <div className="p-5 bg-white dark:text-gray-100 dark:border-emerald-700 dark:bg-black border rounded shadow-sm">
                 <div className="flex items-center justify-between mb-4">
                   <div>
                     <Link
@@ -155,6 +191,11 @@ export const Navbar = () => {
                       >
                         Contact
                       </Link>
+                    </li>
+                    <li>
+                      <button onClick={handleIconTheme}>
+                        <IconTheme iconClassName={iconClassName} ref={ref} />
+                      </button>
                     </li>
                     <li>
                     <a

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const Project = ({ project }) => {
   return(
-    <div className="p-8 mt-8 bg-gradient-to-t from-lime-600 to-lime-400 dark:from-lime-700 dark:to-lime-500 border rounded-2xl shadow-lg">
+    <div className="p-8 mt-8 h-48 bg-gradient-to-t from-lime-600 to-lime-400 dark:from-lime-700 dark:to-lime-500 border rounded-2xl shadow-lg">
       <Link to={`/documents/${project.slug}`} 
         aria-label="Article" 
         title="Jingle Bells" 

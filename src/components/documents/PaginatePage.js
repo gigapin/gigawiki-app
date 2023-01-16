@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const PaginatePage = ({ document, prev, next }) => {
   return(
-    <div className="place-self-end h-16 mt-4 border-t border-emerald-600">
-      <div className="flex justify-between text-center md:justify-around py-2 mb-4 md:py-4">
+    <div className="place-self-end h-24 border-t border-emerald-600">
+      <div className="flex justify-between text-center py-2 mb-4 md:py-4">
         {
           (prev !== null) ?
             <div className="border rounded-lg border-teal-300 py-4 hover:shadow-md px-1 md:px-2 lg:px-8">

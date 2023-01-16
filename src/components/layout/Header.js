@@ -2,6 +2,7 @@ import doc from '../../assets/docs.jpg'
 
 const Header = () => {
   return(
+    <div className=''>
     <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 z-50">
       <div className="grid gap-10 lg:grid-cols-2">
         <div className="lg:pr-10">
@@ -16,9 +17,10 @@ const Header = () => {
           </div>
         </div>
         <div>
-          <img className="object-cover w-full h-56 rounded-2xl shadow-xl sm:h-96" src={doc} alt="Representing a stack of documents" />
+          <img className="object-cover w-full h-56 rounded-2xl shadow-xl shadow-slate-400 dark:shadow-slate-900 sm:h-96" src={doc} alt="Representing a stack of documents" />
         </div>
       </div>
+    </div>
     </div>
   );
 }

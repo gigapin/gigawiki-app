@@ -9,9 +9,8 @@ import Contact from './components/website/Home/Contact';
 
 function App() {
   return (
-    <div className='app'>
+    <div className='bg-neutral-50 dark:bg-slate-800'>
       <Navbar />
-      
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/libraries' element={<Libraries />} />
@@ -20,7 +19,6 @@ function App() {
           <Route path='/documents/:project/:slug' element={<Page />} />
           <Route path='/contacts' element={<Contact />} />
         </Routes>
-      
     </div>
   );
 }

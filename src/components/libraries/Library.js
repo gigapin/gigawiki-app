@@ -18,7 +18,7 @@ const Library = () => {
 
   return(
     
-      <div className="mx-auto container py-14 px-8 h-full md:px-1 md:grid md:grid-cols-3 md:gap-4 lg:px-0 xl:grid-cols-4">
+      <div className="mx-auto container py-14 px-8 h-screen md:px-1 md:grid md:grid-cols-3 md:gap-4 lg:px-0 xl:grid-cols-4">
         {
           projects.map((project) => (
             <Project 
