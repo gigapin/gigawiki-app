@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --background: #ffffff;
   --text-primary: #365314;
   --text-secondary: #a3e635;
@@ -18,7 +18,7 @@
   --text-link: #3aace0;
   --blockquote: #0284c7;
   --border: #15803d;
-}
+} */
 
 body {
   margin: 0;

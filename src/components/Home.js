@@ -6,18 +6,18 @@ import HowItWorks from "./website/Home/HowItWorks";
 
 const Home = () => {
   return (
-    <div className="w-full bg-neutral-50 dark:bg-slate-800">
+    <div className="w-full">
       <Header />
-      <div className="w-full bg-neutral-50 dark:bg-slate-800">
+      <div className="w-full">
         <Scenario />
       </div>
-      <div className="w-full bg-neutral-50 dark:bg-slate-800">
+      <div className="w-full">
         <HowItWorks />
       </div>
-      <div className="w-full bg-neutral-50 dark:bg-slate-800">
+      <div className="w-full">
         <HowToGet />
       </div>
-      <div className="w-full bg-neutral-50 dark:bg-slate-800">
+      <div className="w-full">
         <HomeFooter />
       </div>
     </div>

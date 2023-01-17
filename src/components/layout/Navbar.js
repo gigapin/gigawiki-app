@@ -7,11 +7,12 @@ import IconTheme from './IconTheme';
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const demo = "http://demo.gigawiki.test";
+  const demo = process.env.REACT_APP_DEMO_PATH;
+  const defaultLibrary = process.env.REACT_APP_DEFAULT_LIBRARY !== "" ? process.env.REACT_APP_DEFAULT_LIBRARY : "/libraries"; 
 
   const ref = useRef(null)
 
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState('system')
   const [iconClassName, setIconClassName] = useState('block')
 
   useEffect(() => {
@@ -39,7 +40,7 @@ export const Navbar = () => {
   }
   
   return (
-    <nav className="px-4 py-5 mx-auto border-b border-emerald-100  text-gray-700 xl:px-24 2xl:px-32  dark:text-gray-100 dark:border-emerald-700 dark:bg-black">
+    <nav className="bg-white px-4 py-5 mx-auto border-b border-emerald-100  text-gray-700 xl:px-24 2xl:px-32  dark:text-gray-100 dark:border-emerald-700 dark:bg-black">
       <div className="relative grid items-center grid-cols-2 lg:grid-cols-3">
         <ul className="flex hidden items-center list-none space-x-8 lg:flex text-xl">
           <li>
@@ -54,7 +55,7 @@ export const Navbar = () => {
           </li>
           <li>
             <Link
-              to="/libraries"
+              to={defaultLibrary}
               aria-label="Docs"
               title="Docs"
               className="font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400"
