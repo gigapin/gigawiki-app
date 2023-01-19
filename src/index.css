@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
+:root {
   --background: #ffffff;
   --text-primary: #365314;
   --text-secondary: #a3e635;
@@ -18,7 +18,7 @@
   --text-link: #3aace0;
   --blockquote: #0284c7;
   --border: #15803d;
-} */
+}
 
 body {
   margin: 0;
@@ -60,20 +60,18 @@ h4 {
 }
 
 table {
-  border: 1px solid var(--border);
+  border: 1px solid var(--text-link);
   margin: 1rem 0 1rem 0;
 }
 
 table > tbody > tr > td {
-  border: 1px solid var(--border);
+  border: 1px solid var(--text-link);
   padding: .25rem;
-  color: var(--text-secondary);
 }
 
 ul {
   list-style-type: disc;
   margin-left: 1.5rem;
-  color: var(--text-secondary);
 }
 
 blockquote {

@@ -12,18 +12,16 @@ export const Navbar = () => {
 
   const ref = useRef(null)
 
-  const [theme, setTheme] = useState('system')
+  const [theme, setTheme] = useState(null)
   const [iconClassName, setIconClassName] = useState('block')
 
   useEffect(() => {
     if (theme === 'dark') {
       document.documentElement.classList.add('dark')
-      document.documentElement.classList.remove('light')
       localStorage.theme = 'dark'
       
     } else {
       document.documentElement.classList.remove('dark')
-      document.documentElement.classList.add('light')
       localStorage.theme = 'light'
     }
   })
@@ -36,7 +34,6 @@ export const Navbar = () => {
       setTheme('dark')
       setIconClassName('hidden')
     }
-    console.log(iconClassName)
   }
   
   return (
@@ -63,7 +60,7 @@ export const Navbar = () => {
               Docs
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               to="/contacts"
               aria-label="Contact"
@@ -72,7 +69,7 @@ export const Navbar = () => {
             >
               Contact
             </Link>
-          </li>
+          </li> */}
         </ul>
         <Link
           to="/"
@@ -183,7 +180,7 @@ export const Navbar = () => {
                         Docs
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link
                         to="/contacts"
                         aria-label="Contact"
@@ -192,7 +189,7 @@ export const Navbar = () => {
                       >
                         Contact
                       </Link>
-                    </li>
+                    </li> */}
                     <li>
                       <button onClick={handleIconTheme}>
                         <IconTheme iconClassName={iconClassName} ref={ref} />
