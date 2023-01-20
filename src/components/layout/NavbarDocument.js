@@ -5,7 +5,7 @@ import { useState } from 'react'
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const demo = "http://demo.gigawiki.test";
+  const demo = process.env.REACT_APP_DEMO_PATH;
   
   return (
     <nav className="px-4 py-5 container mx-auto border-b border-emerald-100 dark:border-emerald-700 text-gray-700  dark:text-gray-100">

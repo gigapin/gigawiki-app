@@ -6,6 +6,7 @@ import IconTheme from './IconTheme';
 
 
 export const Navbar = () => {
+  
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const demo = process.env.REACT_APP_DEMO_PATH;
   const defaultLibrary = process.env.REACT_APP_DEFAULT_LIBRARY !== "" ? process.env.REACT_APP_DEFAULT_LIBRARY : "/libraries"; 
@@ -18,13 +19,12 @@ export const Navbar = () => {
   useEffect(() => {
     if (theme === 'dark') {
       document.documentElement.classList.add('dark')
-      localStorage.theme = 'dark'
-      
+      localStorage.setItem('theme', 'dark')
     } else {
       document.documentElement.classList.remove('dark')
-      localStorage.theme = 'light'
+      localStorage.setItem('theme', 'light')
     }
-  })
+  }, [theme])
 
   const handleIconTheme = () => {
     if (iconClassName === 'hidden') {
