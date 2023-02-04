@@ -1,4 +1,4 @@
-import doc from '../../assets/docs.jpg'
+import doc from '../../assets/docs.webp'
 
 const Header = () => {
   const git = process.env.REACT_APP_GITHUB;

@@ -8,7 +8,7 @@ const IconTheme = forwardRef(({iconClassName}, ref) => {
         (iconClassName === 'block') ? <FaMoon className="w-6 h-6" ref={ref} /> : <FaMoon className="hidden w-6 h-6" />
       }
       {
-        (iconClassName === 'hidden') ? <FaSun className="w-6 h-6" /> : <FaSun className="hidden w-6 h-6" />
+        (iconClassName === 'hidden') ? <FaSun className="w-6 h-6" ref={ref} /> : <FaSun className="hidden w-6 h-6" />
       }
     </div>
   )

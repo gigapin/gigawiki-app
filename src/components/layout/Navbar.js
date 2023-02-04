@@ -1,5 +1,5 @@
-import logo from '../../assets/GiGaWiki-logo-web.png';
-import onlyLogo from '../../assets/GiGaWikiOnlyLogo.png';
+import logo from '../../assets/GiGaWiki-logo-web.webp';
+import onlyLogo from '../../assets/GiGaWikiOnlyLogo.webp';
 import { Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react'
 import IconTheme from './IconTheme';
@@ -60,16 +60,6 @@ export const Navbar = () => {
               Docs
             </Link>
           </li>
-          {/* <li>
-            <Link
-              to="/contacts"
-              aria-label="Contact"
-              title="Contact"
-              className="font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400"
-            >
-              Contact
-            </Link>
-          </li> */}
         </ul>
         <Link
           to="/"
@@ -180,16 +170,6 @@ export const Navbar = () => {
                         Docs
                       </Link>
                     </li>
-                    {/* <li>
-                      <Link
-                        to="/contacts"
-                        aria-label="Contact"
-                        title="Contact"
-                        className="font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400"
-                      >
-                        Contact
-                      </Link>
-                    </li> */}
                     <li>
                       <button onClick={handleIconTheme}>
                         <IconTheme iconClassName={iconClassName} ref={ref} />

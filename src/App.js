@@ -3,20 +3,21 @@ import Navbar from './components/layout/Navbar';
 import Home from './components/Home';
 import Libraries from './components/libraries/Libraries';
 import Library from './components/libraries/Library';
-import Document from './components/documents/Document';
 import Page from './components/documents/Page';
-import Contact from './components/website/Home/Contact';
-import { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import Spinner from './components/layout/Spinner';
+
+const Document = React.lazy(() => import('./components/documents/Document'));
 
 function App() {
 
   const [loading, setLoading] = useState(false)
+
   useEffect(() => {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
-    }, 3000)
+    }, 100)
   }, [])
 
   return (
@@ -27,14 +28,15 @@ function App() {
         :
         <>
         <Navbar />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/libraries' element={<Libraries />} />
-          <Route path='/libraries/:libraryId' element={<Library />} />
-          <Route path='/documents/:project' element={<Document />} />
-          <Route path='/documents/:project/:slug' element={<Page />} />
-          <Route path='/contacts' element={<Contact />} />
-        </Routes>
+        <Suspense fallback={<Spinner />}>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/libraries' element={<Libraries />} />
+            <Route path='/libraries/:libraryId' element={<Library />} />
+            <Route path='/documents/:project' element={<Document />} />
+            <Route path='/documents/:project/:slug' element={<Page />} />
+          </Routes>
+        </Suspense>
         </>
       }
       

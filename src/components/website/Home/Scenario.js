@@ -1,5 +1,5 @@
-import companyImg from '../../../assets/company.jpg'
-import studentsImg from '../../../assets/students.jpg'
+import companyImg from '../../../assets/company.webp'
+import studentsImg from '../../../assets/students.webp'
 import { FaCaretRight } from 'react-icons/fa'
 
 const Scenario = () => {
