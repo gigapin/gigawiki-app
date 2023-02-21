@@ -12,7 +12,7 @@ const HowToGet = () => {
       <div className="border-2 border-teal-200 p-8 rounded-lg shadow-sm">
         <div className='my-3'><FaFileDownload className="w-8 h-8 text-sky-600"/></div>
         <div className=""><h3 className="text-2xl font-semibold text-cyan-600">Application download</h3></div>
-        <div className="my-4 text-lime-400"><p>GiGaWiki is a self-hosted application, can be downloaded from this GitHub's page</p></div>
+        <div className="my-4 text-lime-600"><p>GiGaWiki is a self-hosted application, can be downloaded from this GitHub's page</p></div>
         <div className="">
           <a href={git} rel="noreferrer" target="_blank">GitHub</a>
         </div>
@@ -21,7 +21,7 @@ const HowToGet = () => {
       <div className="border-2 border-teal-200 p-8 rounded-lg shadow-sm">
         <div className='my-3'><FaFileSignature className="w-8 h-8 text-sky-600"/></div>
         <div className=""><h3 className="text-2xl font-semibold text-cyan-600">Simple Requirements</h3></div>
-        <div className="my-4 text-lime-400">
+        <div className="my-4 text-lime-600">
           <p>
             GiGaWiki is built using PHP/Laravel framework and it uses a database to store data, you can choise between MySQL and PostgreSQL.
             Please read the documentation to get all information about installation and setup.

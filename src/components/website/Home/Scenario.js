@@ -3,12 +3,15 @@ import studentsImg from '../../../assets/students.webp'
 import { FaCaretRight } from 'react-icons/fa'
 
 const Scenario = () => {
+  const width = '600px'
+  const height = '400px'
+
   return (
     <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-12 z-50">
       <h2 className="text-center text-3xl pb-12 text-teal-600">Possible scenarios for using GiGaWiki</h2>
       <div className="grid gap-10 lg:grid-cols-2">
         <div>
-          <img src={companyImg} alt='Company Scenario' className='rounded-2xl shadow-xl shadow-slate-400 dark:shadow-slate-900' />
+          <img src={companyImg} width={width} height={height} alt='Company Scenario' className='rounded-2xl shadow-xl shadow-slate-400 dark:shadow-slate-900' />
         </div>
         <div>
           <h3 className='text-2xl mb-2 text-cyan-600'>Companies</h3>
@@ -60,7 +63,7 @@ const Scenario = () => {
           </div>
           </div>
           <div>
-            <img src={studentsImg} alt='Company Scenario' className='rounded-2xl shadow-xl shadow-slate-400 dark:shadow-slate-900' />
+            <img src={studentsImg} width={width} height={height} alt='Company Scenario' className='rounded-2xl shadow-xl shadow-slate-400 dark:shadow-slate-900' />
           </div>
       </div>
     </div>
