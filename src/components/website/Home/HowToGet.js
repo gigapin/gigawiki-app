@@ -1,4 +1,5 @@
 import { FaFileDownload, FaFileSignature } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const HowToGet = () => {
   const git = process.env.REACT_APP_GITHUB;
@@ -28,7 +29,7 @@ const HowToGet = () => {
           </p>
         </div>
         <div className="">
-          <a href={doc} rel="noreferrer">Go to documentation</a>
+          <Link to={doc} rel="noreferrer">Go to documentation</Link>
         </div>
       </div>
 
