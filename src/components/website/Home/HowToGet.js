@@ -28,7 +28,7 @@ const HowToGet = () => {
           </p>
         </div>
         <div className="">
-          <a href={doc} target="_blank" rel="noreferrer">Go to documentation</a>
+          <a href={doc} rel="noreferrer">Go to documentation</a>
         </div>
       </div>
 
